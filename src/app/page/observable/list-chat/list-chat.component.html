@@ -1,0 +1,53 @@
+<div style="display: flex">
+    <mat-card class="example-card">
+        <mat-card-header class="card-header">
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Muhammad Rahman</mat-card-title>
+            <mat-card-subtitle class="subtitle">Front End Engineer</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="chat-box">
+                <div class="chat-wraper" *ngFor="let item of listChat" [class]="item.type === 'sender' ? 'sender' : ''">
+                    <div class="chat-item" [class]="item.type === 'receiver' ? 'chat-item-receiver' : 'chat-item-sender'">
+                        {{item.message}}
+                    </div>
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <app-input-text [type]="'sender'"></app-input-text>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="example-card">
+        <mat-card-header class="card-header">
+            <div mat-card-avatar class="example-header-image-right"></div>
+            <mat-card-title>Firdaus</mat-card-title>
+            <mat-card-subtitle class="subtitle">Front End Engineer</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="chat-box">
+                <div class="chat-wraper" *ngFor="let item of listChatRight" [class]="item.type === 'sender' ? 'sender' : ''">
+                    <div class="chat-item" [class]="item.type === 'receiver' ? 'chat-item-receiver' : 'chat-item-sender'">
+                        {{item.message}}
+                    </div>
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <app-input-text [type]="'receiver'"></app-input-text>
+        </mat-card-actions>
+    </mat-card>
+    <mat-card class="explenation-card">
+        <mat-card-title>Explanation</mat-card-title>
+        <mat-card-content>
+            <p>
+                this is us <strong>@Injectable or Singleton services</strong> you can read more in this <a href="https://angular.io/guide/singleton-services"> ink</a>
+            </p>
+            <p>
+                This is example of using <strong>Singleton services</strong>, in this example i use 3 components, you can check this example in folder <strong>src/app/page/observable</strong>
+            </p>
+            <app-input-a></app-input-a> + <app-input-b></app-input-b> = <app-input-c></app-input-c>
+        </mat-card-content>
+    </mat-card>
+</div>
