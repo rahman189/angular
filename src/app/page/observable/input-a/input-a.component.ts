@@ -4,7 +4,7 @@ import { MessageService } from '../service/message.service'
   selector: 'app-input-a',
   template: `
   <mat-form-field>
-    <input type="number" min="0" [(ngModel)]="numberValue" (keydown.enter)="calculate()" matInput >
+    <input type="number" min="0" [(ngModel)]="numberValue" (keyup)="calculate()" matInput >
   </mat-form-field>
   `,
   styleUrls: ['./input-a.component.scss']
